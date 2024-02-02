@@ -78,6 +78,7 @@ public class Server {
                         JLabel jlFileName = new JLabel(fileName);
                         jlFileName.setFont(new Font("Arial", Font.BOLD, 20));
                         jlFileName.setBorder(new EmptyBorder(10, 0, 10, 0));
+                        jlFileName.setAlignmentX(Component.CENTER_ALIGNMENT);
 
                         if (getFileExtension(fileName).equalsIgnoreCase("txt")){
                             jpFileRow.setName(String.valueOf(fileId));
@@ -95,6 +96,7 @@ public class Server {
                             jFrame.validate();
                         }
                             myFiles.add(new MyFile(fileId, fileName, fileContentBytes, getFileExtension(fileName)));
+                        fileId++;
                     }
 
                 }
